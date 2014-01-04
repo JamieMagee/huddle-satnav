@@ -3,4 +3,6 @@ language: cpp
 compiler: 
   - gcc
   
-script: make route
+script: 
+  - make route
+  - ./bin/route
