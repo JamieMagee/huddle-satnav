@@ -1,6 +1,6 @@
 CXX = g++
 SRC = $(wildcard *.cc)
-CFLAGS = -w -O3
+CFLAGS = -w
 BINDIR = ./bin/
 
 route : $(SRC)
