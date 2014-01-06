@@ -1,11 +1,11 @@
-CXX = g++
-SRC = $(wildcard *.cc)
-CFLAGS = -w
+CC = gcc
+SRC = $(wildcard *.c)
+CFLAGS = -w -std=c99
 BINDIR = ./bin/
 
 route : $(SRC)
 	mkdir -p $(BINDIR)
-	$(CXX) $^ -o $(BINDIR)$@ $(CFLAGS)
+	$(CC) $^ -o $(BINDIR)$@ $(CFLAGS)
   
 clean:
 	rm -rf bin/*

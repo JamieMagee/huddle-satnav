@@ -1,8 +1,9 @@
-language: cpp
+language: c
 
 compiler: 
   - gcc
+  - clang
   
 script: 
-  - make route
-  - ./bin/route
+  - $(CC) -o route route.c main.c -std=c99 -w
+  - ./route
