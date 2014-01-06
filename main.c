@@ -22,25 +22,20 @@ int main()
   graph[D][E] = 6;
   graph[E][B] = 3;
   
-  char path[5] = "ABC";
-  colour = dist(graph, path)==9?KGRN:KRED;
-  printf("%sTest #1 %s\n", colour, dist(graph, path)==9?"Passed":"Failed");
+  colour = dist(graph, "ABC")==9?KGRN:KRED;
+  printf("%sTest #1 %s\n", colour, dist(graph, "ABC")==9?"Passed":"Failed");
   
-  strcpy(path,"AD");
-  colour = dist(graph, path)==5?KGRN:KRED;
-  printf("%sTest #2 %s\n", colour, dist(graph, path)==5?"Passed":"Failed");
+  colour = dist(graph, "AD")==5?KGRN:KRED;
+  printf("%sTest #2 %s\n", colour, dist(graph, "AD")==5?"Passed":"Failed");
   
-  strcpy(path,"ADC");
-  colour = dist(graph, path)==13?KGRN:KRED;
-  printf("%sTest #3 %s\n", colour, dist(graph, path)==13?"Passed":"Failed");
+  colour = dist(graph, "ADC")==13?KGRN:KRED;
+  printf("%sTest #3 %s\n", colour, dist(graph, "ADC")==13?"Passed":"Failed");
   
-  strcpy(path,"AEBCD");
-  colour = dist(graph, path)==21?KGRN:KRED;
-  printf("%sTest #4 %s\n", colour, dist(graph, path)==21?"Passed":"Failed");
+  colour = dist(graph, "AEBCD")==21?KGRN:KRED;
+  printf("%sTest #4 %s\n", colour, dist(graph, "AEBCD")==21?"Passed":"Failed");
   
-  strcpy(path,"AED");
-  colour = dist(graph, path)==-1?KGRN:KRED;
-  printf("%sTest #5 %s\n", colour, dist(graph, path)==-1?"Passed":"Failed");
+  colour = dist(graph, "AED")==-1?KGRN:KRED;
+  printf("%sTest #5 %s\n", colour, dist(graph, "AED")==-1?"Passed":"Failed");
   
   colour = traverse(graph, 'C', 'C', 0, 3, 999)==2?KGRN:KRED;
   printf("%sTest #6 %s\n", colour, traverse(graph, 'C', 'C', 0, 3, 999)==2?"Passed":"Failed");

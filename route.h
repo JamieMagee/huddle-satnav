@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define A 0
 #define B 1
@@ -7,7 +6,7 @@
 #define D 3
 #define E 4
 
-#define KNRM  "\x1B[0m"
+#define KNRM "\x1B[0m"
 #define KRED "\x1B[31m"
 #define KGRN "\x1B[32m"
 
