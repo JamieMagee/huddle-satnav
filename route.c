@@ -7,7 +7,7 @@
 int dist(int graph[][5], char *path)
 {
   int dist = 0;
-  for (int i = 0 ; path[i+1] != NULL; i++)
+  for (int i = 0 ; path[i+1] != '\0'; i++)
   {
     if (graph[path[i]-65][path[i+1]-65] != 999)
     {

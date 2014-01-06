@@ -3,6 +3,7 @@
 int main()
 {
   
+  char* colour;
   int graph[5][5];
   for (int i = 0; i < 5; i++)
   {
@@ -22,30 +23,41 @@ int main()
   graph[E][B] = 3;
   
   char path[5] = "ABC";
-  printf("Test #1 %s\n",dist(graph, path)==9?"Passed":"Failed");
+  colour = dist(graph, path)==9?KGRN:KRED;
+  printf("%sTest #1 %s\n", colour, dist(graph, path)==9?"Passed":"Failed");
   
   strcpy(path,"AD");
-  printf("Test #2 %s\n",dist(graph, path)==5?"Passed":"Failed");
+  colour = dist(graph, path)==5?KGRN:KRED;
+  printf("%sTest #2 %s\n", colour, dist(graph, path)==5?"Passed":"Failed");
   
   strcpy(path,"ADC");
-  printf("Test #3 %s\n",dist(graph, path)==13?"Passed":"Failed");
+  colour = dist(graph, path)==13?KGRN:KRED;
+  printf("%sTest #3 %s\n", colour, dist(graph, path)==13?"Passed":"Failed");
   
   strcpy(path,"AEBCD");
-  printf("Test #4 %s\n",dist(graph, path)==21?"Passed":"Failed");
+  colour = dist(graph, path)==21?KGRN:KRED;
+  printf("%sTest #4 %s\n", colour, dist(graph, path)==21?"Passed":"Failed");
   
   strcpy(path,"AED");
-  printf("Test #5 %s\n",dist(graph, path)==-1?"Passed":"Failed");
+  colour = dist(graph, path)==-1?KGRN:KRED;
+  printf("%sTest #5 %s\n", colour, dist(graph, path)==-1?"Passed":"Failed");
   
-  printf("Test #6 %s\n",traverse(graph, 'C', 'C', 0, 3, 999)==2?"Passed":"Failed");
+  colour = traverse(graph, 'C', 'C', 0, 3, 999)==2?KGRN:KRED;
+  printf("%sTest #6 %s\n", colour, traverse(graph, 'C', 'C', 0, 3, 999)==2?"Passed":"Failed");
   
-  printf("Test #7 %s\n",traverse(graph, 'A', 'C', 4, 4, 999)==3?"Passed":"Failed");
+  colour = traverse(graph, 'A', 'C', 4, 4, 999)==3?KGRN:KRED;
+  printf("%sTest #7 %s\n", colour, traverse(graph, 'A', 'C', 4, 4, 999)==3?"Passed":"Failed");
   
-  printf("Test #8 %s\n",shortest(graph, 'A', 'C')==9?"Passed":"Failed");
+  colour = shortest(graph, 'A', 'C')==9?KGRN:KRED;
+  printf("%sTest #8 %s\n", colour, shortest(graph, 'A', 'C')==9?"Passed":"Failed");
   
-  printf("Test #9 %s\n",shortest(graph, 'B', 'B')==9?"Passed":"Failed");
+  colour = shortest(graph, 'B', 'B')==9?KGRN:KRED;
+  printf("%sTest #9 %s\n", colour, shortest(graph, 'B', 'B')==9?"Passed":"Failed");
   
   // TODO: Implement distance check in traverse
-  // printf("Test #10 %s\n",traverse(graph, 'C', 'C', 0, 20, 30)==9?"Passed":"Failed");
+  // printf("%sTest #10 %s\n", colour, traverse(graph, 'C', 'C', 0, 20, 30)==9?"Passed":"Failed");
+  
+  printf(KNRM);
 
   return 0;
 }
