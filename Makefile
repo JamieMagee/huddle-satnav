@@ -1,11 +1,11 @@
 CC = gcc
 SRC = $(wildcard *.c)
-CFLAGS = -std=c99 -Wall -Wextra
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=c99
 BINDIR = ./bin/
 
 route : $(SRC)
 	mkdir -p $(BINDIR)
-	$(CC) $^ -o $(BINDIR)$@ $(CFLAGS)
+	$(CC) $^ $(CFLAGS) -o $(BINDIR)$@ 
   
 clean:
 	rm -rf bin/*
