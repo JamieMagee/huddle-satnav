@@ -1,6 +1,6 @@
 CC = gcc
 SRC = $(wildcard *.c)
-CFLAGS = -std=c99
+CFLAGS = -std=c99 -Wall -Wextra
 BINDIR = ./bin/
 
 route : $(SRC)
