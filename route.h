@@ -11,7 +11,7 @@
 #define KGRN "\x1B[32m"
 
 int dist(int graph[][5], char *path);
-int traverse(int graph[][5], char start, char stop, int min_junc, int max_junc, int max_dist);
+int traverse(int graph[][5], char start, char stop, int min_junc, int max_junc);
 int shortest(int graph[][5], char start, char end);
 int min(int a, int b);
 void matrix_mul(int a[][5], int b[][5], int product[][5]);

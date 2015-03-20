@@ -37,11 +37,11 @@ int main()
   colour = dist(graph, "AED")==-1?KGRN:KRED;
   printf("%sTest #5 %s\n", colour, dist(graph, "AED")==-1?"Passed":"Failed");
   
-  colour = traverse(graph, 'C', 'C', 0, 3, 999)==2?KGRN:KRED;
-  printf("%sTest #6 %s\n", colour, traverse(graph, 'C', 'C', 0, 3, 999)==2?"Passed":"Failed");
+  colour = traverse(graph, 'C', 'C', 0, 3)==2?KGRN:KRED;
+  printf("%sTest #6 %s\n", colour, traverse(graph, 'C', 'C', 0, 3)==2?"Passed":"Failed");
   
-  colour = traverse(graph, 'A', 'C', 4, 4, 999)==3?KGRN:KRED;
-  printf("%sTest #7 %s\n", colour, traverse(graph, 'A', 'C', 4, 4, 999)==3?"Passed":"Failed");
+  colour = traverse(graph, 'A', 'C', 4, 4)==3?KGRN:KRED;
+  printf("%sTest #7 %s\n", colour, traverse(graph, 'A', 'C', 4, 4)==3?"Passed":"Failed");
   
   colour = shortest(graph, 'A', 'C')==9?KGRN:KRED;
   printf("%sTest #8 %s\n", colour, shortest(graph, 'A', 'C')==9?"Passed":"Failed");

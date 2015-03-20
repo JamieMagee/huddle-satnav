@@ -27,12 +27,12 @@ int dist(int graph[][5], char *path)
   of possible routes with n-1 junctions
 */
 
-int traverse(int graph[][5], char start, char stop, int min_junc, int max_junc, int max_dist)
+int traverse(int graph[][5], char start, char stop, int min_junc, int max_junc)
 {
   int routes = 0;
-  int adjacency[5][5] = { 0 };
-  int product[5][5] = { 0 };
-  int temp[5][5] = { 0 };
+  int adjacency[5][5] = {{ 0} };
+  int product[5][5] = {{ 0 }};
+  int temp[5][5] = {{ 0 }};
   
   for (int i = 0; i < 5; i++)
   {
