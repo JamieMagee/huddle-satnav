@@ -1,4 +1,3 @@
-CC = gcc
 SRC = $(wildcard *.c)
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=c99
 BINDIR = ./bin/
