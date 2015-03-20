@@ -5,5 +5,5 @@ compiler:
   - clang
   
 script: 
-  - $CC -o route route.c main.c -std=c99 -w
+  - make route
   - ./route
