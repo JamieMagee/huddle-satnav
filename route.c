@@ -30,7 +30,7 @@ int dist(int graph[][5], char *path)
 int traverse(int graph[][5], char start, char stop, int min_junc, int max_junc)
 {
   int routes = 0;
-  int adjacency[5][5] = {{ 0} };
+  int adjacency[5][5] = {{ 0 }};
   int product[5][5] = {{ 0 }};
   int temp[5][5] = {{ 0 }};
   
